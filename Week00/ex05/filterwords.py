@@ -16,8 +16,8 @@ def ft_filter(arg:str, n):
 if __name__ == "__main__":
 	try:
 		assert len(sys.argv) == 3, "ERROR: wrong number of args"
-		# assert sys.argv[1] is str, "ERROR: first arg is not a string" 
-		# assert sys.argv[2] is int, "ERROR: second arg is not an in"
+		assert sys.argv[1] is str, "ERROR: first arg is not a string" 
+		assert sys.argv[2] is int, "ERROR: second arg is not an integer"
 		print(sys.argv)
 		ft_filter(sys.argv[1], int(sys.argv[2]))
 	except AssertionError as msg:
