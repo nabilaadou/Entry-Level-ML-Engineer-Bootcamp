@@ -14,16 +14,16 @@ def text_analyzer(arg=None):
 		arg = input("What is the text to count?\n")
 	try:
 		assert type(arg) is str, "argument is not a string"
-		for i in arg:
-			if i.isupper():
+		for c in arg:
+			if c.isupper():
 				upperLen += 1
-			elif i.islower():
+			elif c.islower():
 				lowerLen += 1
-			elif i in punctuationMarks:
+			elif c in punctuationMarks:
 				punctuationLen += 1
-			elif i == ' ':
+			elif c == ' ':
 				spacesLen += 1
-			elif i.isdigit():
+			elif c.isdigit():
 				digitsLen += 1
 		print("The text contains", len(arg), "characters:")
 		print(upperLen, "upper letters")
